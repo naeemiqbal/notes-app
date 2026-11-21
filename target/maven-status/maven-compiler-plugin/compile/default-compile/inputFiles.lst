@@ -1,0 +1,6 @@
+/home/naeem/javawork/fde/src/main/java/com/example/notesapp/model/Note.java
+/home/naeem/javawork/fde/src/main/java/com/example/notesapp/controller/NoteController.java
+/home/naeem/javawork/fde/src/main/java/com/example/notesapp/controller/HomeController.java
+/home/naeem/javawork/fde/src/main/java/com/example/notesapp/NotesAppApplication.java
+/home/naeem/javawork/fde/src/main/java/com/example/notesapp/repository/NoteRepository.java
+/home/naeem/javawork/fde/src/main/java/com/example/notesapp/service/NoteService.java
