@@ -142,7 +142,8 @@ jobs:
             --application-name  "$EB_APP_NAME" \
             --environment-name  "$EB_ENV_NAME" \
             --version-label     "$VERSION_LABEL" \
-            --region            "$AWS_REGION"
+            --region            "$AWS_REGION" \
+            --options-to-remove "Namespace=aws:elasticbeanstalk:managedactions,OptionName=ManagedActionsEnabled"
 
       - name: Wait for deployment to complete
         run: |
