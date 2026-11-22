@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 const empty = { note: '', created: '', active: true }
 
@@ -73,7 +74,7 @@ export default function NoteForm({ initial, onSubmit, onCancel }) {
               value={form.created ?? ''}
               onChange={handleChange}
             />
-            {!isEdit && <div className="form-text">Leave blank to use today's date.</div>}
+            {!isEdit && <div className="form-text">Leave blank to use today&apos;s date.</div>}
           </div>
 
           {/* Active toggle */}
@@ -105,4 +106,10 @@ export default function NoteForm({ initial, onSubmit, onCancel }) {
       </div>
     </div>
   )
+}
+
+NoteForm.propTypes = {
+  initial:  PropTypes.object,
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
 }

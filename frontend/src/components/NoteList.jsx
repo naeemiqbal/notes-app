@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export default function NoteList({ notes, onEdit, onDelete }) {
   return (
     <div className="card shadow-sm">
@@ -20,7 +22,7 @@ export default function NoteList({ notes, onEdit, onDelete }) {
                 </td>
               </tr>
             )}
-            {notes.map(n => (
+            {notes.map((n) => (
               <tr key={n.id}>
                 <td className="align-middle text-muted">{n.id}</td>
                 <td className="align-middle">{n.note}</td>
@@ -54,4 +56,10 @@ export default function NoteList({ notes, onEdit, onDelete }) {
       </div>
     </div>
   )
+}
+
+NoteList.propTypes = {
+  notes:    PropTypes.array.isRequired,
+  onEdit:   PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
 }
