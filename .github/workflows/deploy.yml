@@ -123,7 +123,7 @@ jobs:
 
       - name: Upload bundle to S3
         run: |
-          VERSION_LABEL="deploy-${{ github.sha }}"
+          VERSION_LABEL="deploy-${{ github.sha }}-${{ github.run_attempt }}"
           aws s3 cp deploy.zip \
             "s3://$EB_S3_BUCKET/$EB_APP_NAME/${VERSION_LABEL}.zip"
           echo "VERSION_LABEL=${VERSION_LABEL}" >> "$GITHUB_ENV"
